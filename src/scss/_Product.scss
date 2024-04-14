@@ -1,0 +1,42 @@
+table {
+  thead {
+    tr {
+      th {
+        font-size: 13.5 px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        font-weight: 600;
+        font-size: 13px;
+        text-align: center;
+        // Thuộc tính căn giữa thẻ td
+        vertical-align: middle;
+        img {
+          width: 70px;
+          height: 70px;
+          border-radius: 6px;
+          box-shadow: 0px 0px 5px 0.5px rgb(151, 148, 148);
+        }
+        .Icon-update {
+          font-size: 20px;
+          text-align: center;
+        }
+        .Icon-delete {
+          font-size: 25px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-backdrop {
+  background: none;
+}

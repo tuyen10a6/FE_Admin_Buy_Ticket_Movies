@@ -1,0 +1,134 @@
+.title {
+  color: rgb(95, 90, 90);
+  background-color: white;
+  padding: 7px;
+  border-radius: 7px;
+  font-size: 20px;
+  box-shadow: 0 0 10px rgba(228, 218, 218, 0.5);
+  padding-left: 20px;
+}
+.col-9 {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.col-3 {
+  background-color: rgb(236, 82, 82);
+  height: 90px;
+  color: white;
+  text-align: center;
+  line-height: 90px;
+  width: 25%;
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-around;
+  margin: 0px 5px;
+}
+#image_cart {
+  height: 35px;
+  width: 35px;
+  border-radius: 4px;
+}
+.col-3:nth-child(2) {
+  background-color: rgba(99, 155, 10, 0.728);
+  height: 90px;
+  color: white;
+  text-align: center;
+  line-height: 90px;
+  width: 25%;
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-around;
+}
+.col-3:nth-child(3) {
+  background-color: rgba(126, 39, 172, 0.728);
+  height: 90px;
+  color: white;
+  text-align: center;
+  line-height: 90px;
+  width: 25%;
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-around;
+}
+
+.col-3:nth-child(4) {
+  background-color: rgba(126, 39, 172, 0.728);
+  height: 90px;
+  color: white;
+  text-align: center;
+  line-height: 90px;
+  width: 25%;
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-around;
+}
+.ProductBestItem {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.ProductBestItem img {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+}
+.ProductItemBestName {
+  font-weight: 500;
+  color: black;
+
+  margin-left: 30px;
+  min-width: 600px;
+}
+.quantityItem {
+  float: right;
+  margin-left: 50px;
+  color: rgb(26, 150, 7);
+  min-width: 120px;
+}
+.quantityItem span {
+  color: rgb(26, 150, 7);
+  min-width: 120px;
+}
+.index:nth-child(1) {
+  color: red;
+  margin: 0px 10px;
+  font-size: 17px;
+}
+.iconbestproduct {
+  width: 30px !important;
+  height: 30px !important;
+}
+.range_item_receive {
+  align-items: center;
+}
+.range_item_receive p {
+  padding: 0px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+.range_item_receive input {
+  color: red;
+  background: red;
+}
+.range {
+  justify-content: space-between;
+  display: flex;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+h3 {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin: 20px 10px;
+}
+.OrderStatusName:nth-child(1) {
+  color: green;
+}
