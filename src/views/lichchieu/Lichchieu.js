@@ -21,24 +21,24 @@ const LichChieu = () => {
   const token = localStorage.getItem('token')
 
   useEffect(() => {
-    fetch('http://localhost:3000/v1/api/getLichChieu')
+    fetch('http://localhost:3003/v1/api/getLichChieu')
       .then((response) => response.json())
       .then((data) => setDanhSachLichChieu(data.data))
       .catch((error) => console.error('Error fetching danh sách lịch chiếu:', error))
 
-    fetch('http://localhost:3000/v1/api/phim')
+    fetch('http://localhost:3003/v1/api/phim')
       .then((response) => response.json())
       .then((data) => setDanhSachPhim(data.data))
       .catch((error) => console.error('Error fetching danh sách phim:', error))
 
-    fetch('http://localhost:3000/v1/api/rap_phim')
+    fetch('http://localhost:3003/v1/api/rap_phim')
       .then((response) => response.json())
       .then((data) => setDanhSachRap(data.data))
       .catch((error) => console.error('Error fetching danh sách rạp:', error))
   }, [])
 
   const handleAddLichChieu = () => {
-    fetch('http://localhost:3000/v1/api/addLichChieu', {
+    fetch('http://localhost:3003/v1/api/addLichChieu', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ const LichChieu = () => {
   }
 
   const handleUpdateLichChieu = () => {
-    fetch(`http://localhost:3000/v1/api/updateLichChieu/${editingId}`, {
+    fetch(`http://localhost:3003/v1/api/updateLichChieu/${editingId}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -94,7 +94,7 @@ const LichChieu = () => {
   }
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3000/v1/api/deleteLichChieu/${id}`, {
+    fetch(`http://localhost:3003/v1/api/deleteLichChieu/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

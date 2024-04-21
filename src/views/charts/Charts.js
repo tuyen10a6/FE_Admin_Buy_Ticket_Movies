@@ -19,14 +19,14 @@ const RapPhim = () => {
   const token = localStorage.getItem('token')
 
   useEffect(() => {
-    fetch('http://localhost:3000/v1/api/rap_phim')
+    fetch('http://localhost:3003/v1/api/rap_phim')
       .then((response) => response.json())
       .then((data) => setDanhMuc(data.data))
       .catch((error) => console.error('Error fetching danh muc:', error))
   }, [])
 
   const handleAddRapPhim = () => {
-    fetch('http://localhost:3000/v1/api/addRapPhim', {
+    fetch('http://localhost:3003/v1/api/addRapPhim', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ const RapPhim = () => {
   }
 
   const handleUpdateRapPhim = () => {
-    fetch(`http://localhost:3000/v1/api/updateRapPhim/${editingId}`, {
+    fetch(`http://localhost:3003/v1/api/updateRapPhim/${editingId}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ const RapPhim = () => {
   }
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3000/v1/api/deleteRapPhim/${id}`, {
+    fetch(`http://localhost:3003/v1/api/deleteRapPhim/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

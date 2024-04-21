@@ -26,12 +26,12 @@ const Phim = () => {
   const token = localStorage.getItem('token')
 
   useEffect(() => {
-    fetch('http://localhost:3000/v1/api/phim')
+    fetch('http://localhost:3003/v1/api/phim')
       .then((response) => response.json())
       .then((data) => setDanhSachPhim(data.data))
       .catch((error) => console.error('Error fetching danh sách phim:', error))
 
-    fetch('http://localhost:3000/v1/api/danhmuc')
+    fetch('http://localhost:3003/v1/api/danhmuc')
       .then((response) => response.json())
       .then((data) => setDanhMuc(data.data))
       .catch((error) => console.error('Error fetching danh sách danh mục:', error))
@@ -47,7 +47,7 @@ const Phim = () => {
     formData.append('danhmuc_id', newPhim.danhmuc_id)
     formData.append('image', newPhim.image)
 
-    fetch('http://localhost:3000/v1/api/addPhim', {
+    fetch('http://localhost:3003/v1/api/addPhim', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`,
@@ -77,7 +77,7 @@ const Phim = () => {
   }
 
   const handleUpdatePhim = () => {
-    fetch(`http://localhost:3000/v1/api/updatePhim/${editingId}`, {
+    fetch(`http://localhost:3003/v1/api/updatePhim/${editingId}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -105,7 +105,7 @@ const Phim = () => {
   }
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3000/v1/api/deletePhim/${id}`, {
+    fetch(`http://localhost:3003/v1/api/deletePhim/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -219,7 +219,7 @@ const Phim = () => {
               <td style={tableCellStyle}>
                 <img
                   style={{ width: '100px' }}
-                  src={'http://localhost:3000' + phim.image}
+                  src={'http://localhost:3003' + phim.image}
                   alt="Ảnh phim"
                 />
               </td>

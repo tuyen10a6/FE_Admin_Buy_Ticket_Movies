@@ -15,7 +15,7 @@ const DatVe = () => {
 
   useEffect(() => {
     // Fetch danh sách đặt vé từ API và cập nhật state
-    fetch('http://localhost:3000/v1/api/getDatVe')
+    fetch('http://localhost:3003/v1/api/getDatVe')
       .then((response) => response.json())
       .then((data) => setDanhSachDatVe(data.data))
       .catch((error) => console.error('Error fetching danh sách đặt vé:', error))
@@ -30,7 +30,7 @@ const DatVe = () => {
 
   const handleUpdateDatVe = () => {
     // Gửi yêu cầu cập nhật thông tin đặt vé đến API và cập nhật state sau khi thành công
-    fetch(`http://localhost:3000/v1/api/updateDatVe/${editingId}`, {
+    fetch(`http://localhost:3003/v1/api/updateDatVe/${editingId}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ const DatVe = () => {
 
   const handleDelete = (id) => {
     // Gửi yêu cầu xoá đặt vé đến API và cập nhật state sau khi thành công
-    fetch(`http://localhost:3000/v1/api/deleteDatVe/${id}`, {
+    fetch(`http://localhost:3003/v1/api/deleteDatVe/${id}`, {
       method: 'DELETE',
     })
       .then(() => {

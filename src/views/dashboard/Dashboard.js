@@ -8,14 +8,14 @@ const Dashboard = () => {
   const [editingLoaiPhim, setEditingLoaiPhim] = useState('')
   const token = localStorage.getItem('token')
   useEffect(() => {
-    fetch('http://localhost:3000/v1/api/danhmuc')
+    fetch('http://localhost:3003/v1/api/danhmuc')
       .then((response) => response.json())
       .then((data) => setDanhMuc(data.data))
       .catch((error) => console.error('Error fetching danh muc:', error))
   }, [])
 
   const handleAddLoaiPhim = () => {
-    fetch('http://localhost:3000/v1/api/addDanhMuc', {
+    fetch('http://localhost:3003/v1/api/addDanhMuc', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const Dashboard = () => {
   }
 
   const handleUpdateLoaiPhim = () => {
-    fetch(`http://localhost:3000/v1/api/updateDanhMuc/${editingId}`, {
+    fetch(`http://localhost:3003/v1/api/updateDanhMuc/${editingId}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const Dashboard = () => {
   }
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3000/v1/api/deleteDanhMuc/${id}`, {
+    fetch(`http://localhost:3003/v1/api/deleteDanhMuc/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

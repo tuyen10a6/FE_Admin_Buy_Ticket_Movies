@@ -12,7 +12,7 @@ const Login = () => {
   const handleLogin = () => {
     if (email !== '' && password !== '') {
       // Gọi API đăng nhập
-      fetch('http://localhost:3000/v1/api/auth/login', {
+      fetch('http://localhost:3003/v1/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
